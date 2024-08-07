@@ -2,69 +2,82 @@
 
 # Kino OS
 
-Kino OS is an Arduino-based operating system designed for the Dentaku project by SAIFT S.A.S. It features a graphical user interface (GUI) using an LCD display, keypad input, and various modules for arithmetic operations, gaming, and configuration.
+Kino OS es un sistema operativo basado en Arduino diseñado para el proyecto Dentaku por SAIFT S.A.S. Cuenta con una interfaz gráfica de usuario (GUI) utilizando una pantalla LCD, entrada por teclado y varios módulos para operaciones aritméticas, juegos y configuración.
 
-## Features
+## Características
 
-### Drivers
+### Controladores
 
-- **LCD Driver:** Utilizes `LiquidCrystal_I2C` library for interfacing with a 16x2 LCD display.
-- **Keypad Driver:** Implements `Keypad` library to handle input from a 4x4 matrix keypad.
+- **Controlador LCD:** Utiliza la biblioteca `LiquidCrystal_I2C` para la interfaz con una pantalla LCD de 16x2.
+- **Controlador de Teclado:** Implementa la biblioteca `Keypad` para manejar la entrada de un teclado matricial de 4x4.
 
-### Programmer Control Variables
+### Variables de Control del Programador
 
-- **Main Menu:** Initial menu options include "Arimetica", "Videojuego", and "Ajustes".
-- **Secondary Menu:** Options under "Arimetica" include "Suma", "Resta", "Multipl", and "Division".
-- **Menu Control:** Manages navigation and selection within menus using the LCD display and keypad.
+- **Menú Principal:** Las opciones iniciales incluyen "Aritmética", "Videojuego" y "Ajustes".
+- **Menú Secundario:** Las opciones bajo "Aritmética" incluyen "Suma", "Resta", "Multiplicación" y "División".
+- **Control del Menú:** Gestiona la navegación y selección dentro de los menús utilizando la pantalla LCD y el teclado.
 
-### Arithmetic Logic Unit (ALU)
+### Unidad Aritmética (ALU)
 
-- **ALU Module:** Supports basic arithmetic operations (addition, subtraction, multiplication, division) and exponentiation.
-- **Extended ALU:** Capable of multi-operand calculations for advanced arithmetic scenarios.
+- **Módulo ALU:** Soporta operaciones aritméticas básicas (suma, resta, multiplicación, división) y exponenciación.
+- **ALU Extendida:** Capaz de realizar cálculos con múltiples operandos para escenarios aritméticos avanzados.
 
-### Boot and Control Flow
+### Flujo de Arranque y Control
 
-- **Initialization:** Initializes LCD display, prints "KINO OS", and sets up initial menu display.
-- **Main Loop:** Controls the flow of the operating system based on user input and menu selections.
-- **Layout Management:** Switches between main menu, secondary menu, arithmetic operations, gaming, and configuration interfaces.
+- **Inicialización:** Inicializa la pantalla LCD, muestra "KINO OS" y configura la pantalla inicial del menú.
+- **Bucle Principal:** Controla el flujo del sistema operativo basado en la entrada del usuario y las selecciones del menú.
+- **Gestión de Layout:** Cambia entre el menú principal, menú secundario, operaciones aritméticas, juegos y interfaces de configuración.
 
-### Configuration and Gaming
+### Configuración y Juegos
 
-- **Configuration Menu:** Placeholder for future configuration options.
-- **Game Module:** Simple interactive game with movement and point scoring mechanics.
+- **Menú de Configuración:** Marcador de posición para futuras opciones de configuración.
+- **Módulo de Juego:** Juego interactivo simple con mecánicas de movimiento y puntuación.
 
-## Setup and Usage
+## Configuración y Uso
 
-1. **Hardware Requirements:**
-   - Arduino board compatible with `Wire.h`, `LiquidCrystal_I2C.h`, and `Keypad.h` libraries.
-   - 16x2 LCD display and a 4x4 matrix keypad.
+1. **Requisitos de Hardware:**
+   - Placa Arduino compatible con las bibliotecas `Wire.h`, `LiquidCrystal_I2C.h` y `Keypad.h`.
+   - Pantalla LCD de 16x2 y un teclado matricial de 4x4.
 
-2. **Software Requirements:**
-   - Arduino IDE with necessary libraries installed (`LiquidCrystal_I2C`, `Keypad`).
+2. **Requisitos de Software:**
+   - IDE de Arduino con las bibliotecas necesarias instaladas (`LiquidCrystal_I2C`, `Keypad`).
 
-3. **Installation:**
-   - Connect the LCD display and keypad to the Arduino board based on the defined pin configurations (`rowPins`, `colPins`).
+3. **Instalación:**
+   - Conecta la pantalla LCD y el teclado a la placa Arduino según las configuraciones de pines definidas (`rowPins`, `colPins`).
 
-4. **Upload Code:**
-   - Upload the provided Arduino sketch (`KinoOS.ino`) to your Arduino board using the Arduino IDE.
+4. **Subir Código:**
+   - Sube el boceto de Arduino proporcionado (`KinoOS.ino`) a tu placa Arduino utilizando el IDE de Arduino.
 
-5. **Usage:**
-   - Upon startup, navigate through menus using the keypad (`A` for previous, `B` for next, `*` and `#` for layout changes).
-   - Explore arithmetic operations, play the game, or access configuration settings.
+5. **Uso:**
+   - Al iniciar, navega por los menús utilizando el teclado (`A` para anterior, `B` para siguiente, `*` y `#` para cambios en el layout).
+   - Explora las operaciones aritméticas, juega al juego o accede a los ajustes de configuración.
 
-## Version and License
+## Versión y Licencia
 
-- **Version:** 1.1.6
-- **Open Source:** This is an open-source version of Kino OS, freely available for modification and distribution.
-- **License:** This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- **Versión:** 1.1.6
+- **Código Abierto:** Esta es una versión de código abierto de Kino OS, disponible libremente para modificación y distribución.
+- **Licencia:** Este proyecto está licenciado bajo la Licencia MIT - consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-## About Dentaku and SAIFT S.A.S.
+## Sobre Dentaku y SAIFT S.A.S.
 
-- **Dentaku:** Kino OS was developed for the Dentaku project, aimed at providing a versatile Arduino-based operating system.
-- **SAIFT S.A.S.:** Developed by SAIFT S.A.S., this version of Kino OS is tailored for educational and open-source community use.
+- **Dentaku:** Kino OS fue desarrollado para el proyecto Dentaku, con el objetivo de proporcionar un sistema operativo basado en Arduino versátil.
+- **SAIFT S.A.S.:** Desarrollado por SAIFT S.A.S., esta versión de Kino OS está adaptada para uso educativo y comunitario de código abierto.
 
-## Contributing
+## Contribuyendo
 
-Contributions to Kino OS are welcome! Feel free to submit bug reports, feature requests, or pull requests via GitHub Issues.
+¡Las contribuciones a Kino OS son bienvenidas! No dudes en enviar informes de errores, solicitudes de características o pull requests a través de los Issues en GitHub.
 
 ---
+
+## Kino OSS 2
+
+Kino OSS 2 es la segunda versión del sistema operativo Kino OS, con una serie de mejoras y características nuevas:
+
+- **Nuevas Funcionalidades:** Mejora en la lógica aritmética, soporte extendido para operaciones avanzadas y nuevas opciones en el menú.
+- **Optimización del Rendimiento:** Mejoras en el manejo del menú y el rendimiento general del sistema.
+- **Características Adicionales:** Nuevas opciones en el menú de configuración y ajustes experimentales.
+
+**Versión:** 1.6.2  
+**Estado:** Beta, disponible desde el 10 de agosto de 2024.  
+
+Para más detalles y actualizaciones sobre Kino OSS 2, visita la [página oficial de SAIFT S.A.S.](https://saift-web.vercel.app/).
